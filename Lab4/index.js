@@ -29,15 +29,18 @@ app.get("/hello", (req, res) => {
 
 //http://localhost:8089/user
 //Query Parameter
-app.get("/user", function(req, res) {
+app.get("/user", (req, res) =>{
     //res.json(req.query)
     response = {
-        first_name: req.query.first_name,
-        last_name: req.query.last_name
+        first_name: req.query.first_name || "Pritesh",
+        last_name: req.query.last_name || "Patel"
        
     };
-    console.log(response);
+
+
+
     res.json(response)
+    
 })
 
 
